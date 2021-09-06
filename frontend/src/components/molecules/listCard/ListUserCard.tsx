@@ -24,14 +24,17 @@ export const ListUserCard: VFC<Props> = memo((props) => {
         <>
             <Flex onClick={onOpen} w="280px" alignItems="center" borderRadius={10} bg="orange.50" _hover={{ cursor: "pointer", bg: "orange.100"}} > 
                 <Image borderRadius="full" color={isHost ? 'pink.400' : 'teal.400'} border='2px' boxSize="48px" src={image === null ? `${process.env.PUBLIC_URL}/img/freemeison.jpeg` : `${process.env.PUBLIC_URL}/uploads/${image}`} alt='' />
-                <Text fontSize="md" fontWeight="bold" pl={4} >
+                <Text fontSize="md" fontWeight="bold" pl={4} whiteSpace='nowrap' overflow='hidden' textOverflow='ellipsis' >
                     {children}
                 </Text>
                 <Spacer />
+                {isHost ? (
+                    <>
+                        <Text fontSize="xs" color="pink.400">HOST</Text>
+                    </>
+                ) : null }
             </Flex>
             <UserInfoModal isOpen={isOpen} onClose={onClose} onClickLogout={onClickLogout} />
         </>
     );
 });
-
-// src={image ?? undefined}

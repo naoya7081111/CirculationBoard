@@ -46,15 +46,6 @@ server.listen(port, () => {
         console.log(`listening on *:${port}`);
     });
 
-app.get('/api/login', (req, res) => {
-    connection.query(
-        'SELECT * FROM users',
-        (error, results) => {
-            res.json(results);
-        }
-    )
-})
-
 // JWTに関する記述
 // 鍵
 const SECRET_KEY = '9711Naoya';

@@ -26,10 +26,15 @@ export const ListMembersCard: VFC<Props> = memo((props) => {
         <>
             <Flex w="280px" mb={4} alignItems="center" borderRadius={10} bg="orange.50" _hover={{ cursor: "pointer", bg: "orange.100"}} onClick={() => onClickMemberModal(id)} > 
                 <Image borderRadius="full" color={isHost ? 'pink.400' : 'gray.600'} border='2px' boxSize="42px" src={image === null ? `${process.env.PUBLIC_URL}/img/freemeison.jpeg` : `${process.env.PUBLIC_URL}/uploads/${image}`} />
-                <Text fontSize="sm" fontWeight="bold" pl={4} >
+                <Text fontSize="sm" fontWeight="bold" pl={4} whiteSpace='nowrap' overflow='hidden' textOverflow='ellipsis' >
                     {children}
                 </Text>
                 <Spacer />
+                {isHost ? (
+                    <>
+                        <Text fontSize="xs" color="pink.400">HOST</Text>
+                    </>
+                ) : null }
             </Flex>
             <MemberInfoModal isOpen={isOpen} onClose={onClose} id={selcetMemberId} />
         </>

@@ -18,7 +18,7 @@ export const ListNewsCard: VFC<Props> = memo((props)=> {
                 <Badge colorScheme={isComplete ? 'teal' : 'red'}>
                     {isComplete ? '既読' : '未読'}
                 </Badge>
-                <Text w={{base: "180px", md: "320px"}} h="24px" fontSize="md" fontWeight="bold" pl={4} overflow="hidden" whiteSpace="nowrap"　>
+                <Text w={{base: "180px", md: "320px"}} h="24px" fontSize="md" fontWeight="bold" pl={4} whiteSpace='nowrap' overflow='hidden' textOverflow='ellipsis'>
                     {children}
                 </Text>
                 <Spacer />

@@ -27,6 +27,7 @@ export const NewsPostModal: VFC<Props> = memo((props) => {
     const onClickPost = () => {
         newsPost({title, content, isImportant});
         onClose();
+        setIsImportant(false)
     }
 
     return (

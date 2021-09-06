@@ -19,7 +19,7 @@ export const TitleAndBackButton: VFC<Props> = memo((props) => {
         <>
             <Flex w='100%' alignItems='center'>
                 <PageBackButton onClickBack={onClickBack} />
-                <Heading mx="auto" fontSize="24" >
+                <Heading mx="auto" fontSize="24"　whiteSpace='nowrap' overflow='hidden' textOverflow='ellipsis' >
                     {title}
                 </Heading>
             </Flex>

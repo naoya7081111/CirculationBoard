@@ -1,6 +1,5 @@
 import { Home } from "../components/pages/Home";
 import { View } from "../components/pages/View";
-import { Post } from "../components/pages/Post";
 import { Page404 } from "../components/pages/Page404";
 import { NewsLists } from "../components/pages/NewsLists";
 
@@ -19,11 +18,6 @@ export const homeRoutes = [
         path: "/newslists/:status",
         exact: false,
         childern: <NewsLists />
-    },
-    {
-        path: "/post",
-        exact: false,
-        childern: <Post />
     },
     {
         path: "*",

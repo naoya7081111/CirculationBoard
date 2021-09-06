@@ -16,7 +16,7 @@ export const ListBelongCard: VFC<Props> = (props) => {
         <>
             <Flex w={width} h="64px" p={2} alignItems="center" borderRadius={10} bg="orange.50" > 
                 <Image borderRadius="lg" boxSize="32px" src={image === null ? `${process.env.PUBLIC_URL}/img/freemeisoncommunity.png` : `${process.env.PUBLIC_URL}/uploads/${image}`} />
-                <Text fontSize="sm" fontWeight="bold" pl={4} >
+                <Text fontSize="sm" fontWeight="bold" pl={4} whiteSpace='nowrap' overflow='hidden' textOverflow='ellipsis' >
                     {children}
                 </Text>
                 <Spacer />
